@@ -1,4 +1,10 @@
 extension StringCapitalize on String {
+  /// Capitalize this string
+  ///
+  /// To uppercase first letter of this string:
+  /// ```dart
+  /// 'dart'.capitalizeOrFail() // Dart
+  /// ```
   String capitalizeOrFail() {
     if (isEmpty) {
       throw 'String doesn\'t [empty]';
