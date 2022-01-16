@@ -3,6 +3,16 @@ import 'package:test/test.dart';
 
 void main() {
   group('String capitalize extension', () {
+    group('capitalize', () {
+      test('returns an empty [String]', () {
+        expect(''.capitalize(), '');
+      });
+
+      test('uppercase first letter [String]', () {
+        expect('dart'.capitalize(), 'Dart');
+      });
+    });
+
     group('capitalize or fail', () {
       test('String doesn\'t [empty] exception', () {
         expect(
@@ -12,21 +22,21 @@ void main() {
       });
     });
 
-    test('capitalized [String] with more two letters', () {
+    test('uppercase first letter of [String] with more two letters', () {
       expect(
         'potato'.capitalizeOrFail(),
         'Potato',
       );
     });
 
-    test('capitalized [String] with two letters', () {
+    test('uppercase first letter of [String] with two letters', () {
       expect(
         'hi'.capitalizeOrFail(),
         'Hi',
       );
     });
 
-    test('capitalized [String] with one letter', () {
+    test('uppercase first letter of [String] with one letter', () {
       expect(
         'h'.capitalizeOrFail(),
         'H',
