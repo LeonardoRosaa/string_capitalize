@@ -1,22 +1,21 @@
-A library for Dart developers.
+# String capitalize
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+Does transform first letter of a string to uppercase.
 
-## Usage
-
-A simple usage example:
-
+## example
 ```dart
 import 'package:string_capitalize/string_capitalize.dart';
 
-main() {
-  var awesome = new Awesome();
-}
+'dart'.capitalizeOrFail() // Dart
 ```
 
-## Features and bugs
+### Install
 
-Please file feature requests and bugs at the [issue tracker][tracker].
-
-[tracker]: http://example.com/issues/replaceme
+### Dart
+```shell
+dart pub add string_capitalize
+```
+### Flutter
+```shell
+flutter pub add string_capitalize
+```

@@ -1,5 +1,5 @@
 extension StringCapitalize on String {
-  /// Uppercase first letter of this string
+  /// Does transform uppercase first letter of this string
   /// and this is be empty, returns an empty
   /// string.
   ///
@@ -13,7 +13,7 @@ extension StringCapitalize on String {
     return _makeCapitalization();
   }
 
-  /// Uppercase first letter of this string
+  /// Does transform uppercase first letter of this string
   /// or throw an exception if this string
   /// is be empty.
   ///
@@ -29,8 +29,8 @@ extension StringCapitalize on String {
     return _makeCapitalization();
   }
 
-  /// Uppercase first letter of
-  /// this string
+  /// Does transform first letter of
+  /// this string to uppercase.
   String _makeCapitalization() {
     final firstLetter = this[0].toUpperCase();
     final restLetters = substring(1, length);
