@@ -17,7 +17,7 @@ void main() {
       test('String doesn\'t [empty] exception', () {
         expect(
           () => ''.capitalizeOrFail(),
-          throwsA('String doesn\'t [empty]'),
+          throwsA('String does not be [empty]'),
         );
       });
     });

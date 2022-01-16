@@ -10,7 +10,7 @@ extension StringCapitalize on String {
   String capitalize() {
     if (isEmpty) return '';
 
-    return _buildCapitalization();
+    return _makeCapitalization();
   }
 
   /// Uppercase first letter of this string
@@ -23,13 +23,15 @@ extension StringCapitalize on String {
   /// ```
   String capitalizeOrFail() {
     if (isEmpty) {
-      throw 'String doesn\'t [empty]';
+      throw 'String does not be [empty]';
     }
 
-    return _buildCapitalization();
+    return _makeCapitalization();
   }
 
-  String _buildCapitalization() {
+  /// Uppercase first letter of
+  /// this string
+  String _makeCapitalization() {
     final firstLetter = this[0].toUpperCase();
     final restLetters = substring(1, length);
 
