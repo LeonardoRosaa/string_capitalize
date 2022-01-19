@@ -26,7 +26,23 @@ extension StringCapitalize on String {
   /// ```
   String capitalizeOrFail() {
     if (isEmpty) {
-      throw 'String does not be [empty]';
+      throw StringDoesNotBeEmptyException();
+    }
+
+    return _makeCapitalization();
+  }
+
+  /// Does transform uppercase first letter for all words of this string
+  /// or throw an exception if this string
+  /// is be empty.
+  ///
+  /// To uppercase first letter of this string:
+  /// ```dart
+  /// 'dart'.capitalizeOrFail() // Dart
+  /// ```
+  String capitalizeEachOrFail() {
+    if (isEmpty) {
+      throw StringDoesNotBeEmptyException();
     }
 
     return _makeCapitalization();
@@ -47,6 +63,7 @@ extension StringCapitalize on String {
 
     return _makeCapitalizationEach();
   }
+  
 
   /// Does uppercase first letter for all words
   /// of this string
@@ -79,4 +96,17 @@ extension StringCapitalize on String {
 
     return '$firstLetter$restLetters';
   }
+}
+
+abstract class StringException implements Exception {
+  const StringException([this.error]);
+
+  final dynamic error;
+}
+
+class StringDoesNotBeEmptyException extends StringException {
+  const StringDoesNotBeEmptyException(): super('String does not be [empty]');
+
+  @override
+  String toString() => error;
 }
