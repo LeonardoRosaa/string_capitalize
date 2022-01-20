@@ -1,15 +1,13 @@
-# String capitalize
+<p align="center">
+    <img src="./docs/assets/banner.png" />
+</p>
 
-Does transform first letter of a string to uppercase.
+<p align="center">
+    To uppercase first letter of the word
+</p>
 
-## example
-```dart
-import 'package:string_capitalize/string_capitalize.dart';
 
-'dart'.capitalizeOrFail() // Dart
-```
-
-### Install
+## Install
 
 ### Dart
 ```shell
@@ -19,3 +17,13 @@ dart pub add string_capitalize
 ```shell
 flutter pub add string_capitalize
 ```
+
+## Methods
+
+- `capitalize` method does transform first letter a uppercase of the `String` or returns empty `String`;
+
+- `capitalizeOrFail` method does transform first letter a uppercase of the `String` or returns an exception;
+
+- `capitalizeEach` method does transform all first letter a uppercase of words of the `String` or returns empty `String`;
+
+- `capitalizeEachOrFail` method does transform all first letter a uppercase of words of the `String` or returns an exception.
