@@ -11,3 +11,8 @@
 - Added capitalize each
 - Added capitalize each or fail
 - Improved exceptions
+
+## 0.0.4
+
+- Improved documentation
+- Formatted code
