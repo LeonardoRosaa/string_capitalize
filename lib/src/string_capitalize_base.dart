@@ -36,9 +36,10 @@ extension StringCapitalize on String {
   /// or throw an exception if this string
   /// is be empty.
   ///
-  /// To uppercase first letter of this string:
+  /// To uppercase first letter of all words this string:
   /// ```dart
-  /// 'dart'.capitalizeOrFail() // Dart
+  /// 'I like dart language'.capitalizeEachOrFail() // I Like Dart Language
+  /// 'I  like dart   language'.capitalizeEachOrFail() // I  Like Dart   Language
   /// ```
   String capitalizeEachOrFail() {
     if (isEmpty) {
@@ -48,7 +49,7 @@ extension StringCapitalize on String {
     return _makeCapitalization();
   }
 
-  /// Does transform uppercase first letter for all words 
+  /// Does transform uppercase first letter for all words
   /// of this string or throw an exception if this string
   /// is be empty.
   ///
@@ -58,12 +59,10 @@ extension StringCapitalize on String {
   /// 'I  like dart   language'.capitalizeEach() // I  Like Dart   Language
   /// ```
   String capitalizeEach() {
-    
     if (isEmpty) return '';
 
     return _makeCapitalizationEach();
   }
-  
 
   /// Does uppercase first letter for all words
   /// of this string
@@ -73,6 +72,7 @@ extension StringCapitalize on String {
 
     foundLetters.allMatches(this).map((e) {
       var indexWord = oldEnd;
+
       /// Get word by start and end indexes
       final word = substring(e.start, e.end).capitalize();
 
@@ -105,7 +105,7 @@ abstract class StringException implements Exception {
 }
 
 class StringDoesNotBeEmptyException extends StringException {
-  const StringDoesNotBeEmptyException(): super('String does not be [empty]');
+  const StringDoesNotBeEmptyException() : super('String does not be [empty]');
 
   @override
   String toString() => error;
