@@ -16,3 +16,7 @@
 
 - Improved documentation
 - Formatted code
+
+## 0.0.5
+
+- Updated dependencies
