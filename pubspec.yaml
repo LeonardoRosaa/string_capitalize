@@ -1,6 +1,6 @@
 name: string_capitalize
 description: Simple extension for Dart language to capitalize our strings
-version: 0.0.2
+version: 0.0.4
 homepage: https://github.com/LeonardoRosaa/string_capitalize
 
 environment:

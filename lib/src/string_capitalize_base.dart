@@ -1,3 +1,6 @@
+/// Matches all characteres
+final foundLetters = RegExp(r'\w+');
+
 extension StringCapitalize on String {
   /// Does transform uppercase first letter of this string
   /// and this is be empty, returns an empty
@@ -23,10 +26,66 @@ extension StringCapitalize on String {
   /// ```
   String capitalizeOrFail() {
     if (isEmpty) {
-      throw 'String does not be [empty]';
+      throw StringDoesNotBeEmptyException();
     }
 
     return _makeCapitalization();
+  }
+
+  /// Does transform uppercase first letter for all words of this string
+  /// or throw an exception if this string
+  /// is be empty.
+  ///
+  /// To uppercase first letter of all words this string:
+  /// ```dart
+  /// 'I like dart language'.capitalizeEachOrFail() // I Like Dart Language
+  /// 'I  like dart   language'.capitalizeEachOrFail() // I  Like Dart   Language
+  /// ```
+  String capitalizeEachOrFail() {
+    if (isEmpty) {
+      throw StringDoesNotBeEmptyException();
+    }
+
+    return _makeCapitalization();
+  }
+
+  /// Does transform uppercase first letter for all words
+  /// of this string or throw an exception if this string
+  /// is be empty.
+  ///
+  /// To uppercase first letter for all words of this string:
+  /// ```dart
+  /// 'I like dart language'.capitalizeEach() // I Like Dart Language
+  /// 'I  like dart   language'.capitalizeEach() // I  Like Dart   Language
+  /// ```
+  String capitalizeEach() {
+    if (isEmpty) return '';
+
+    return _makeCapitalizationEach();
+  }
+
+  /// Does uppercase first letter for all words
+  /// of this string
+  String _makeCapitalizationEach() {
+    final words = <String>[];
+    var oldEnd = 0;
+
+    foundLetters.allMatches(this).map((e) {
+      var indexWord = oldEnd;
+
+      /// Get word by start and end indexes
+      final word = substring(e.start, e.end).capitalize();
+
+      while (indexWord != e.start) {
+        words.add(' ');
+        indexWord++;
+      }
+
+      oldEnd = e.end;
+      words.add(word);
+    }).toList();
+
+    return words.join();
   }
 
   /// Does transform first letter of
@@ -37,4 +96,17 @@ extension StringCapitalize on String {
 
     return '$firstLetter$restLetters';
   }
+}
+
+abstract class StringException implements Exception {
+  const StringException([this.error]);
+
+  final dynamic error;
+}
+
+class StringDoesNotBeEmptyException extends StringException {
+  const StringDoesNotBeEmptyException() : super('String does not be [empty]');
+
+  @override
+  String toString() => error;
 }
