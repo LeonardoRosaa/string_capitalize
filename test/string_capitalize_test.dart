@@ -80,5 +80,15 @@ void main() {
             'I Spend 300 Dollars Per Month');
       });
     });
+
+    group('starts with a capital letter', () {
+      test('should be with capital letter', () {
+        expect('Dart'.startsWithCapital(), true);
+      });
+
+      test('should not be with capital letter', () {
+        expect('dart'.startsWithCapital(), false);
+      });
+    });
   });
 }

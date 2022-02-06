@@ -88,6 +88,13 @@ extension StringCapitalize on String {
     return words.join();
   }
 
+  /// Method verify if this String starts with
+  /// a capital letter
+  bool startsWithCapital() {
+    final text = this[0];
+    return text == text.toUpperCase();
+  }
+
   /// Does transform first letter of
   /// this string to uppercase.
   String _makeCapitalization() {

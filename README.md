@@ -26,4 +26,6 @@ flutter pub add string_capitalize
 
 - `capitalizeEach` method does transform all first letter a uppercase of words of the `String` or returns empty `String`;
 
-- `capitalizeEachOrFail` method does transform all first letter a uppercase of words of the `String` or returns an exception.
+- `capitalizeEachOrFail` method does transform all first letter a uppercase of words of the `String` or returns an exception;
+
+- `startsWithCapital` method verify if the `String` starts with with a capital letter.
