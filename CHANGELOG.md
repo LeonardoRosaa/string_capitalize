@@ -20,3 +20,9 @@
 ## 0.0.5
 
 - Updated dependencies
+
+## 0.0.6
+
+### Features
+
+- Added `startsWithCapital` method
