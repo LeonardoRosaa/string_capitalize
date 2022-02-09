@@ -1,6 +1,13 @@
 /// Matches all characteres
 final foundLetters = RegExp(r'\w+');
 
+extension ListCapilize on List<String> {
+  /// Update the first letter to capital  all items of this List<String>
+  List<String> capitalize() {
+    return map((e) => e.capitalize()).toList();
+  }
+}
+
 extension StringCapitalize on String {
   /// Does transform uppercase first letter of this string
   /// and this is be empty, returns an empty

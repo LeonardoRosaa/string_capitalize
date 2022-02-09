@@ -90,5 +90,13 @@ void main() {
         expect('dart'.startsWithCapital(), false);
       });
     });
+
+    group('capitalize list', () {
+      test('should be capitalize all items', () {
+        final result = ['peter', 'parker', 'and', 'mary', 'jane'].capitalize();
+
+        expect(result, ['Peter', 'Parker', 'And', 'Mary', 'Jane']);
+      });
+    });
   });
 }
