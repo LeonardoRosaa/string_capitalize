@@ -26,3 +26,9 @@
 ### Features
 
 - Added `startsWithCapital` method
+
+## 0.0.7
+
+### Features
+
+- Added `capitalize` method to List<String>

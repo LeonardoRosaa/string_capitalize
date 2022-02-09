@@ -2,7 +2,7 @@
 final foundLetters = RegExp(r'\w+');
 
 extension ListCapilize on List<String> {
-  /// Update the first letter to capital  all items of this List<String>
+  /// Make first letter to capital to all items of this List<String>
   List<String> capitalize() {
     return map((e) => e.capitalize()).toList();
   }
