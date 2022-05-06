@@ -57,6 +57,11 @@ void main() {
         expect('I spend 300 dollars per month'.capitalizeEach(),
             'I Spend 300 Dollars Per Month');
       });
+
+      test('uppercase all words with special characters', () {
+        expect('Street, London!'.capitalizeEach(),
+            'Street, London!');
+      });
     });
 
     group('capitalize each or fail', () {

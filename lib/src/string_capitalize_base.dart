@@ -1,5 +1,5 @@
 /// Matches all characteres
-final foundLetters = RegExp(r'\w+');
+final foundLetters = RegExp(r'\w+[A-Za-z !@#$%^&*(),.?":{}|<>]');
 
 extension ListCapilize on List<String> {
   /// Make first letter to capital to all items of this List<String>
@@ -87,7 +87,7 @@ extension StringCapitalize on String {
         words.add(' ');
         indexWord++;
       }
-
+      print("= $word =");
       oldEnd = e.end;
       words.add(word);
     }).toList();
