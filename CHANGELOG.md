@@ -32,3 +32,11 @@
 ### Features
 
 - Added `capitalize` method to List<String>
+
+## 0.0.8
+
+- Uppercase words with special characters.
+
+## 0.0.9
+
+- Fix(capitalize each): fixed spaces.

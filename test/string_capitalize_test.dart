@@ -59,8 +59,17 @@ void main() {
       });
 
       test('uppercase all words with special characters', () {
-        expect('Street, London!'.capitalizeEach(),
-            'Street, London!');
+        var text = 'I '.capitalizeEach();
+
+        expect(text, 'I ');
+
+        text += 'think '.capitalizeEach();
+
+        expect(text, 'I Think ');
+       
+        text += 'it is cool'.capitalizeEach();
+
+        expect(text, 'I Think It Is Cool');
       });
     });
 
