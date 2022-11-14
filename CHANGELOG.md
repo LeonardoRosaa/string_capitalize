@@ -40,3 +40,8 @@
 ## 0.0.9
 
 - Fix(capitalize each): fixed spaces.
+
+## 0.0.10
+
+- Removed unused methods;
+- Improved the documentation.
